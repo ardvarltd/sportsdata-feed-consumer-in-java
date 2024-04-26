@@ -1,0 +1,37 @@
+{
+  "namespace": "models.avro",
+  "name": "Team",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "name",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "color",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

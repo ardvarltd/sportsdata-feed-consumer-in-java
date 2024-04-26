@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  sportdata-feed-consumer-example:
+    build: { context: ./ }
+    ports: [ "8099:80" ]
+    environment:
+      SERVER_PORT: 80
+      input.data.type: avro
+      avro.serdes.enabled: true
+      SPRING_KAFKA_BOOTSTRAP_SERVERS:
+      SPRING_KAFKA_PROPERTIES_SCHEMA_REGISTRY_URL:
+      SPRING_KAFKA_PROPERTIES_SECURITY.PROTOCOL: SASL_SSL
+      SPRING_KAFKA_PROPERTIES_SASL_MECHANISM: SCRAM-SHA-512
+      SPRING_KAFKA_PROPERTIES_SASL_JAAS_CONFIG: org.apache.kafka.common.security.scram.ScramLoginModule required username="your-username" password="your-password";
+
+    deploy:
+      resources:
+        limits:
+          memory: 384M
+    restart: on-failure

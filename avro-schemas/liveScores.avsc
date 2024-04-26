@@ -1,0 +1,47 @@
+{
+  "namespace": "models.avro",
+  "name": "LiveScores",
+  "type": "record",
+  "fields": [
+    {
+      "name": "lineEntity",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LineEntity"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriod",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.GamePeriod"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "home",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "away",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

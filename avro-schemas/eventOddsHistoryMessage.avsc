@@ -1,0 +1,80 @@
+{
+  "namespace": "models.avro",
+  "name": "EventOddsHistoryMessage",
+  "type": "record",
+  "fields": [
+    {
+      "name": "origin",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Origin"
+        }
+      ],
+      "default": null
+
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "eventInfo",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.EventInfo"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "liveScores",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LiveScores"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "typedScores",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "keys": "string",
+          "values": "models.avro.Score"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gcsPartitioner",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LiveScores"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

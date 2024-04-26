@@ -1,0 +1,79 @@
+LOG_METADATA_SOURCE: sportsdata-feed-consumer-example
+
+server:
+  port: 8099
+
+input:
+  data:
+    type:
+avro:
+  serdes:
+    enabled:
+
+
+spring:
+  boot:
+    admin:
+      client:
+        enabled: false
+  application:
+    name: ${LOG_METADATA_SOURCE}
+  kafka:
+    bootstrap-servers:
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: SCRAM-SHA-512
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="your-username" password="your-password";
+      schema.registry.url:
+      application.id: sports.data.streams.processor
+      group_id: sports.data.streams.processor
+      default.deserialization.exception.handler: com.ardevar.sportsdata.feed.consumer.example.handlers.DeserializationExceptionHandler
+      default.production.exception.handler: com.ardevar.sportsdata.feed.consumer.example.handlers.StreamRecordProducerExceptionHandler
+      client.dns.lookup: use_all_dns_ips
+      max.request.size: 1048576
+      allow.auto.create.topics: true
+      session.timeout.ms: 45000
+      health-indicator.timeout-ms: 5000
+      auto.register.schemas: true
+      basic.auth.credentials.source:
+      basic.auth.user.info:
+      consumer:
+        auto.offset.reset: latest
+        fetch.max.bytes: 52428800
+        max.poll.records: 500
+        auto.commit.interval.ms: 5000
+        receive.buffer.bytes: 65536
+      commit.interval.ms: 5000
+      num.stream.threads: 2
+      topology.optimization: none
+      cache.max.bytes.buffering: 10485761
+      processing.guarantee: at_least_once
+      replication.factor: 1
+      request.timeout.ms: 60000
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      livenessState:
+        enabled: true
+      readinessState:
+        enabled: true
+      group:
+        liveness:
+          include: livenessState,kafka
+        readiness:
+          include: readinessState,kafka
+
+kafka:
+  health:
+    health-indicator:
+      timeout-ms: 5000
+    auth-exception-retry-interval-ms: 3000
+  streams:
+    application-id: "sportsDataFeedConsumer"
+
+sportsdata:
+  computed-settlement-topic: stream.${input.data.type}.ardevar.sport.settlements
+  computed-market-topic: stream.${input.data.type}.ardevar.sport.markets
+  computed-event-topic: stream.${input.data.type}.ardevar.sport.events

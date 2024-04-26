@@ -1,0 +1,47 @@
+{
+  "namespace": "models.avro",
+  "name": "OddOddsHistory",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "key",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": [
+        "null",
+        {
+          "type": "double"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isValid",
+      "type": [
+        "null",
+        {
+          "type": "boolean"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

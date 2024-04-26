@@ -1,0 +1,27 @@
+{
+  "namespace": "models.avro",
+  "name": "SettlementScore",
+  "type": "record",
+  "fields": [
+    {
+      "name": "home",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "away",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

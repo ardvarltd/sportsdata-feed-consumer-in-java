@@ -1,0 +1,153 @@
+{
+  "namespace": "models.avro",
+  "name": "EventPrematchConsumeMessage",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "state",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "liveGamePeriod",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "liveMinute",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketCount",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "startDate",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timeRange",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "country",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Country"
+
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Sport"
+
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "league",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.League"
+
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "awayTeam",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Team"
+
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "homeTeam",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Team"
+
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "liveScores",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "models.avro.LiveScore"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

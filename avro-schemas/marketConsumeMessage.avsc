@@ -1,0 +1,148 @@
+{
+  "namespace": "models.avro",
+  "name": "MarketConsumeMessage",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "eventId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isHidden",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "updatedAt",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriodId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "index",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isSuspended",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineEntityId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketKey",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketTypeId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "spread",
+      "type": [
+        "null",
+        {
+          "type": "double"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isValid",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "producedTime",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "liveScores",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "models.avro.Odd"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

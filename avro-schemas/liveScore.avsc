@@ -1,0 +1,67 @@
+{
+  "namespace": "models.avro",
+  "name": "LiveScore",
+  "type": "record",
+  "fields": [
+    {
+      "name": "lineEntityId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineEntityName",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriodId",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriodName",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "homeTeam",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "awayTeam",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "namespace": "models.avro",
+  "name": "LiveGamePeriod",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null","string"
+      ],
+      "default": null
+    },
+    {
+      "name": "name",
+      "type": [
+        "null","string"
+
+      ],
+      "default": null
+    }
+  ]
+}

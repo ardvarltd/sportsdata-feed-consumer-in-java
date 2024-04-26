@@ -1,0 +1,68 @@
+{
+  "namespace": "models.avro",
+  "name": "MarketSportsStreamMessage",
+  "type": "record",
+  "fields": [
+    {
+      "name": "origin",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Origin"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "eventInfo",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.EventInfo"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineInfo",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LineInfo"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "odds",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "models.avro.OddOddsHistory"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "namespace": "models.avro",
+  "name": "LineInfo",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "index",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketStatus",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "updatedAt",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketType",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.MarketType"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineEntity",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LineEntity"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriod",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.GamePeriod"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isValid",
+      "type": [
+        "null",
+        {
+          "type": "boolean"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "spread",
+      "type": [
+        "null",
+        {
+          "type": "double"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

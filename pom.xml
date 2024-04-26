@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.0.4</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>com.ardevar.sportsdata</groupId>
+  <artifactId>sportsdata-feed-consumer-example</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>sportsdata-feed-consumer-example</name>
+  <description>Sportsdata Feed Consumer Example</description>
+
+  <properties>
+    <java.version>17</java.version>
+    <jackson.core.version>2.13.1</jackson.core.version>
+    <jackson.databind.version>2.13.2</jackson.databind.version>
+    <kafka-avro-serializer-version>7.2.2</kafka-avro-serializer-version>
+    <kafka-clients-version>7.2.2-ccs</kafka-clients-version>
+    <kafka-streams-version>7.2.2-ccs</kafka-streams-version>
+    <logstash.version>5.2</logstash.version>
+    <logback.classic.version>1.2.11</logback.classic.version>
+    <avro.version>1.11.1</avro.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>confluent</id>
+      <url>https://packages.confluent.io/maven/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-actuator -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-actuator</artifactId>
+      <version>3.0.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-streams</artifactId>
+      <version>${kafka-streams-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-clients</artifactId>
+      <version>${kafka-clients-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.confluent</groupId>
+      <artifactId>kafka-avro-serializer</artifactId>
+      <version>${kafka-avro-serializer-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.confluent</groupId>
+      <artifactId>kafka-streams-avro-serde</artifactId>
+      <version>7.2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.databind.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+      <version>${logstash.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro-maven-plugin</artifactId>
+        <version>${avro.version}</version>
+        <executions>
+          <execution>
+            <id>schemas</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>schema</goal>
+            </goals>
+            <configuration>
+              <sourceDirectory>${project.basedir}/avro-schemas
+              </sourceDirectory>
+              <imports>
+                <import>
+                  ${project.basedir}/avro-schemas/raceDataMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/country.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/marketType.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/odd.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/origin.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/gamePeriod.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/gcsPartitioner.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/league.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/lineEntity.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/lineInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/liveGamePeriod.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/liveScore.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/liveScores.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/marketConsumeMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/score.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/settlementScore.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/settlementConsumeMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/sport.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/team.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/teams.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/eventInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/oddOddsHistory.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/settlementOddsHistoryMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/settlementSportsStreamMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/marketSportsStreamMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/eventOddsHistoryMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/eventPreMatchConsumeMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/eventSportsStreamMessage.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/eventSportsStreamMessageWithRaceInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/replayedGcsPartitioner.avsc
+                </import>
+
+              </imports>
+              <outputDirectory>${project.basedir}/src/main/java
+              </outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

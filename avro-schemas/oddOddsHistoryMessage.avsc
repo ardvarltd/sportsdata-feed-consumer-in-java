@@ -1,0 +1,77 @@
+{
+  "namespace": "models.avro",
+  "name": "OddOddsHistoryMessage",
+  "type": "record",
+  "fields": [
+    {
+      "name": "origin",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Origin"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "eventInfo",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.EventInfo"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineInfo",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.LineInfo"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "odd",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.OddOddsHistory"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gcsPartitioner",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.GcsPartitioner"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

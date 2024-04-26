@@ -1,0 +1,27 @@
+{
+  "namespace": "models.avro",
+  "name": "Teams",
+  "type": "record",
+  "fields": [
+    {
+      "name": "home",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Team"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "away",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.Team"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

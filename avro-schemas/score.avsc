@@ -1,0 +1,27 @@
+{
+  "namespace": "models.avro",
+  "name": "Score",
+  "type": "record",
+  "fields": [
+    {
+      "name": "homeTeam",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "awayTeam",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "origin": {
+    "stream": "sport",
+    "type": "settlement",
+    "environment": "prod",
+    "version": "1.0.0"
+  },
+  "id": "e8bb2c72-02e4-11ef-b80e-42010a9c003a",
+  "status": "loss",
+  "eventInfo": {
+    "id": "7511219",
+    "state": "live",
+    "status": "active",
+    "liveGamePeriod": {
+      "id": "0",
+      "name": "NA"
+    },
+    "liveMinute": 0,
+    "startDate": "2024-04-25 09:18:00.000+0000",
+    "timeRange": "NA",
+    "sport": {
+      "id": "1",
+      "title": "Football",
+      "key": "NA"
+    },
+    "country": {
+      "id": "1",
+      "title": "International"
+    },
+    "league": {
+      "id": "12707",
+      "title": "Esoccer Battle - 8 mins play",
+      "format": "NA"
+    },
+    "teams": {
+      "home": {
+        "id": "836835",
+        "name": "Newcastle (Arcos)",
+        "color": "NA"
+      },
+      "away": {
+        "id": "467351",
+        "name": "Inter (Wboy)",
+        "color": "NA"
+      }
+    }
+  },
+  "lineInfo": {
+    "id": "600056560",
+    "index": 2,
+    "marketStatus": "active",
+    "updatedAt": "2024-04-25 09:28:12.075+0000",
+    "marketType": {
+      "id": "39",
+      "name": "euro_over_under"
+    },
+    "lineEntity": {
+      "id": "1",
+      "name": "goals"
+    },
+    "gamePeriod": {
+      "id": "2",
+      "name": "ft"
+    },
+    "isValid": false,
+    "spread": 3.5
+  },
+  "score": {
+    "home": 1,
+    "away": 3
+  },
+  "odd": {
+    "id": "e_3730744852",
+    "key": "under",
+    "value": 1.576,
+    "isValid": false
+  },
+  "timestamp": "2024-04-25 09:29:51.873+0000"
+}

@@ -1,0 +1,74 @@
+{
+  "origin": {
+    "stream": "sport",
+    "type": "settlement",
+    "environment": "prod",
+    "version": "1.0.0"
+  },
+  "id": "42aa1bc9-c9ca-11ee-826f-42010a9c003a",
+  "status": "loss",
+  "eventInfo": {
+    "id": "7200308",
+    "state": "early",
+    "status": "active",
+    "liveGamePeriod": {
+      "id": "NA",
+      "name": "NA"
+    },
+    "liveMinute": 0,
+    "marketsCount": 0,
+    "startDate": "2024-02-13 15:00:00.000+0000",
+    "timeRange": "NA",
+    "sport": {
+      "id": "22",
+      "title": "Horse Racing"
+    },
+    "country": {
+      "id": "229",
+      "title": "United Kingdom"
+    },
+    "league": {
+      "id": "10946",
+      "title": "Lingfield ",
+      "format": "NA"
+    },
+    "teams": {
+      "home": {
+        "id": "183489",
+        "name": "Horse Racing - Home Team | Race 3"
+      },
+      "away": {
+        "id": "183490",
+        "name": "Horse Racing - Away Team | Race 3"
+      }
+    }
+  },
+  "lineInfo": {
+    "id": "558246644",
+    "index": 1,
+    "marketStatus": "active",
+    "updatedAt": "2024-02-13 15:00:21.410+0000",
+    "marketType": {
+      "id": "81",
+      "name": "rw"
+    },
+    "lineEntity": {
+      "id": "8",
+      "name": "points"
+    },
+    "gamePeriod": {
+      "id": "158",
+      "name": "ft"
+    },
+    "isValid": false,
+    "spread": 0
+  },
+  "score": null,
+  "odd": {
+    "id": "e_3620115149",
+    "key": "head_and_heart",
+    "value": 5.5,
+    "isValid": false
+  },
+  "timestamp": "2024-02-13 15:11:35.620+0000"
+}
