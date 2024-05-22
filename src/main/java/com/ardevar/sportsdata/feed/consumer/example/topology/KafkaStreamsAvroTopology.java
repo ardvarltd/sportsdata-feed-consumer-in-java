@@ -17,6 +17,7 @@ import org.apache.kafka.streams.kstream.Consumed;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
 import org.springframework.stereotype.Component;
+import stream.avro.sport.translations.Value;
 
 @Component
 @Slf4j
@@ -31,6 +32,7 @@ public class KafkaStreamsAvroTopology {
     private final SpecificAvroSerde<SettlementSportsStreamMessage> settlementSportsStreamMessageSpecificAvroSerde;
     private final SpecificAvroSerde<EventSportsStreamMessage> eventSportsStreamMessageSpecificAvroSerde;
     private final SpecificAvroSerde<MarketSportsStreamMessage> marketSportsStreamMessageSpecificAvroSerde;
+    private final SpecificAvroSerde<Value> enumerationAvroSerde;
 
 
     @PostConstruct
@@ -56,6 +58,13 @@ public class KafkaStreamsAvroTopology {
         builder.stream(sportsDataConfig.getComputedSettlementTopic(), Consumed.with(Serdes.String(), settlementSportsStreamMessageSpecificAvroSerde))
                 .peek((key, value) -> {
                     log.info("Got Record From Settlement Stream with id {} - {}", key, value.toString());
+                });
+
+        builder.stream(sportsDataConfig.getComputedEnumerationTopic(),
+                        Consumed.with(Serdes.String(), enumerationAvroSerde))
+                .peek((key, value) -> {
+                    log.info("Got Record From Enumerations Stream with id {} - {}", key,
+                            value.toString());
                 });
     }
 

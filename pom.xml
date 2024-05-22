@@ -139,9 +139,6 @@
               <sourceDirectory>${project.basedir}/avro-schemas
               </sourceDirectory>
               <imports>
-                <import>
-                  ${project.basedir}/avro-schemas/raceDataMessage.avsc
-                </import>
 
                 <import>
                   ${project.basedir}/avro-schemas/country.avsc
@@ -149,10 +146,6 @@
 
                 <import>
                   ${project.basedir}/avro-schemas/marketType.avsc
-                </import>
-
-                <import>
-                  ${project.basedir}/avro-schemas/odd.avsc
                 </import>
 
                 <import>
@@ -192,19 +185,11 @@
                 </import>
 
                 <import>
-                  ${project.basedir}/avro-schemas/marketConsumeMessage.avsc
-                </import>
-
-                <import>
                   ${project.basedir}/avro-schemas/score.avsc
                 </import>
 
                 <import>
                   ${project.basedir}/avro-schemas/settlementScore.avsc
-                </import>
-
-                <import>
-                  ${project.basedir}/avro-schemas/settlementConsumeMessage.avsc
                 </import>
 
                 <import>
@@ -228,10 +213,6 @@
                 </import>
 
                 <import>
-                  ${project.basedir}/avro-schemas/settlementOddsHistoryMessage.avsc
-                </import>
-
-                <import>
                   ${project.basedir}/avro-schemas/settlementSportsStreamMessage.avsc
                 </import>
 
@@ -240,23 +221,11 @@
                 </import>
 
                 <import>
-                  ${project.basedir}/avro-schemas/eventOddsHistoryMessage.avsc
-                </import>
-
-                <import>
-                  ${project.basedir}/avro-schemas/eventPreMatchConsumeMessage.avsc
-                </import>
-
-                <import>
                   ${project.basedir}/avro-schemas/eventSportsStreamMessage.avsc
                 </import>
 
                 <import>
-                  ${project.basedir}/avro-schemas/eventSportsStreamMessageWithRaceInfo.avsc
-                </import>
-
-                <import>
-                  ${project.basedir}/avro-schemas/replayedGcsPartitioner.avsc
+                  ${project.basedir}/avro-schemas/enumeration.avsc
                 </import>
 
               </imports>

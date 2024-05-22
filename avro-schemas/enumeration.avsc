@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "name": "Value",
+  "namespace": "stream.avro.sport.translations",
+  "fields": [
+    {
+      "name": "origin",
+      "type": {
+        "type": "record",
+        "name": "OriginInfo",
+        "fields": [
+          {
+            "name": "stream",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": {
+              "type": "string",
+              "connect.version": 1,
+              "connect.parameters": {
+                "allowed": "sport,league,team,gamePeriod,lineEntity,marketType,selection,market,liveGamePeriod"
+              },
+              "connect.name": "io.debezium.data.Enum"
+            }
+          },
+          {
+            "name": "version",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

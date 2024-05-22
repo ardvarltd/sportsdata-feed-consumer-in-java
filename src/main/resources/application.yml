@@ -5,10 +5,10 @@ server:
 
 input:
   data:
-    type:
+    type: avro
 avro:
   serdes:
-    enabled:
+    enabled: true
 
 
 spring:
@@ -23,10 +23,10 @@ spring:
     properties:
       security.protocol: SASL_SSL
       sasl.mechanism: SCRAM-SHA-512
-      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="your-username" password="your-password";
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="username" password="password";
       schema.registry.url:
-      application.id: sports.data.streams.processor
-      group_id: sports.data.streams.processor
+      application.id: sports.data.streams.consumer.local
+      group_id: sports.data.streams.consumer.local
       default.deserialization.exception.handler: com.ardevar.sportsdata.feed.consumer.example.handlers.DeserializationExceptionHandler
       default.production.exception.handler: com.ardevar.sportsdata.feed.consumer.example.handlers.StreamRecordProducerExceptionHandler
       client.dns.lookup: use_all_dns_ips
@@ -38,7 +38,7 @@ spring:
       basic.auth.credentials.source:
       basic.auth.user.info:
       consumer:
-        auto.offset.reset: latest
+        auto.offset.reset: earliest
         fetch.max.bytes: 52428800
         max.poll.records: 500
         auto.commit.interval.ms: 5000
@@ -77,3 +77,4 @@ sportsdata:
   computed-settlement-topic: stream.${input.data.type}.ardevar.sport.settlements
   computed-market-topic: stream.${input.data.type}.ardevar.sport.markets
   computed-event-topic: stream.${input.data.type}.ardevar.sport.events
+  computed-enumeration-topic: stream.${input.data.type}.ardevar.sport.enumerations

@@ -2,9 +2,6 @@ package com.ardevar.sportsdata.feed.consumer.example.serde;
 
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import models.avro.EventSportsStreamMessage;
 import models.avro.MarketSportsStreamMessage;
@@ -13,6 +10,11 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
+import stream.avro.sport.translations.Value;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 @Configuration
 @RequiredArgsConstructor
@@ -44,6 +46,17 @@ public class AvroSerdes {
         final SpecificAvroSerde<MarketSportsStreamMessage> specificAvroSerde = new SpecificAvroSerde<>();
         final Map<String, Object> map = new HashMap<>();
         map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration()).get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
+        specificAvroSerde.configure(map, false);
+        return specificAvroSerde;
+    }
+
+    @Bean("sportStreamEnumerationAvroSerde")
+    public SpecificAvroSerde<Value> enumerationSportsStreamMessageSpecificAvroSerde() {
+        final SpecificAvroSerde<Value> specificAvroSerde = new SpecificAvroSerde<>();
+        final Map<String, Object> map = new HashMap<>();
+        map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG,
+                Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration())
+                        .get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
         specificAvroSerde.configure(map, false);
         return specificAvroSerde;
     }

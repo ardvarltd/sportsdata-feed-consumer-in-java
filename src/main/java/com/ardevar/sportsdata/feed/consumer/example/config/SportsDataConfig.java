@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 public class SportsDataConfig {
 
     private String computedSettlementTopic;
-
     private String computedMarketTopic;
-
     private String computedEventTopic;
+    private String computedEnumerationTopic;
+
 
 }
