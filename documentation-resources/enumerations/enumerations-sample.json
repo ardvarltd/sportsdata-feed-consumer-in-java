@@ -1,0 +1,11 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "team",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "296"
+  },
+  "value": "Chelsea"
+}
