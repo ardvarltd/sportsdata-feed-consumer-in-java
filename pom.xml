@@ -139,6 +139,9 @@
               <sourceDirectory>${project.basedir}/avro-schemas
               </sourceDirectory>
               <imports>
+                <import>
+                  ${project.basedir}/avro-schemas/odd.avsc
+                </import>
 
                 <import>
                   ${project.basedir}/avro-schemas/country.avsc
@@ -154,10 +157,6 @@
 
                 <import>
                   ${project.basedir}/avro-schemas/gamePeriod.avsc
-                </import>
-
-                <import>
-                  ${project.basedir}/avro-schemas/gcsPartitioner.avsc
                 </import>
 
                 <import>
