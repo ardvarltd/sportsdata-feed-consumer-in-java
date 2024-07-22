@@ -42,6 +42,14 @@
         }
       ],
       "default": null
+    },
+    {
+      "name": "spread",
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
     }
   ]
 }
