@@ -66,19 +66,22 @@
       "id": "e_3569458994",
       "key": "home",
       "value": 2.687,
-      "isValid": true
+      "isValid": true,
+      "spread": 0
     },
     {
       "id": "e_3569458995",
       "key": "away",
       "value": 3.938,
-      "isValid": true
+      "isValid": true,
+      "spread": 0
     },
     {
       "id": "e_3569458996",
       "key": "no_goals",
       "value": 2.17,
-      "isValid": true
+      "isValid": true,
+      "spread": 0
     }
   ],
   "timestamp": "2024-01-09 09:30:11.814+0000"
