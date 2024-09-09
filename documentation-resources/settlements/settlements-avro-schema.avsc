@@ -85,6 +85,11 @@
               "default": null
             },
             {
+              "name": "trackerId",
+              "type": "long",
+              "default": 0
+            },
+            {
               "name": "state",
               "type": [
                 "null",
