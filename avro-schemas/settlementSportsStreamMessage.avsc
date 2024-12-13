@@ -68,6 +68,16 @@
       "default": null
     },
     {
+      "name": "liveScore",
+      "type": [
+        "null",
+        {
+          "type": "models.avro.SettlementLiveScore"
+        }
+      ],
+      "default": null
+    },
+    {
       "name": "odd",
       "type": [
         "null",
@@ -83,6 +93,26 @@
         "null",
         {
           "type": "string"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isEarlyPayout",
+      "type": [
+        "null",
+        {
+          "type": "boolean"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "isFastSettlement",
+      "type": [
+        "null",
+        {
+          "type": "boolean"
         }
       ],
       "default": null

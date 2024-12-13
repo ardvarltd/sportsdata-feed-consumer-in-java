@@ -531,6 +531,14 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "isSafeForBetting",
+      "type": [
+        "null",
+        "boolean"
+      ],
+      "default": null
     }
   ]
 }

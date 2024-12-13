@@ -70,6 +70,7 @@
     "home": 1,
     "away": 3
   },
+  "liveScore": null,
   "odd": {
     "id": "e_3730744852",
     "key": "under",
@@ -77,5 +78,7 @@
     "isValid": false,
     "spread": 3.5
   },
-  "timestamp": "2024-04-25 09:29:51.873+0000"
+  "timestamp": "2024-04-25 09:29:51.873+0000",
+  "isEarlyPayout": false,
+  "isFastSettlement": false
 }

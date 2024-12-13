@@ -510,6 +510,35 @@
       "default": null
     },
     {
+      "name": "liveScore",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "SettlementLiveScore",
+          "fields": [
+            {
+              "name": "home",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            },
+            {
+              "name": "away",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
       "name": "odd",
       "type": [
         "null",
@@ -567,6 +596,22 @@
       "type": [
         "null",
         "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "isEarlyPayout",
+      "type": [
+        "null",
+        "boolean"
+      ],
+      "default": null
+    },
+    {
+      "name": "isFastSettlement",
+      "type": [
+        "null",
+        "boolean"
       ],
       "default": null
     }

@@ -65,11 +65,14 @@
     "spread": 0
   },
   "score": null,
+  "liveScore": null,
   "odd": {
     "id": "e_3620115149",
     "key": "head_and_heart",
     "value": 5.5,
     "isValid": false
   },
-  "timestamp": "2024-02-13 15:11:35.620+0000"
+  "timestamp": "2024-02-13 15:11:35.620+0000",
+  "isEarlyPayout": false,
+  "isFastSettlement": false
 }

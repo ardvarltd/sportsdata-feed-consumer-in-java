@@ -1,0 +1,27 @@
+{
+  "namespace": "models.avro",
+  "name": "SettlementLiveScore",
+  "type": "record",
+  "fields": [
+    {
+      "name": "home",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "away",
+      "type": [
+        "null",
+        {
+          "type": "int"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

@@ -63,6 +63,16 @@
         }
       ],
       "default": null
+    },
+    {
+      "name": "isSafeForBetting",
+      "type": [
+        "null",
+        {
+          "type": "boolean"
+        }
+      ],
+      "default": null
     }
   ]
 }
