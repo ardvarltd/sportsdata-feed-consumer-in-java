@@ -1,0 +1,12 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "lineEntity",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "444",
+    "key": "wir_to_wir_winr"
+  },
+  "value": "Wire to Wire Winner"
+}

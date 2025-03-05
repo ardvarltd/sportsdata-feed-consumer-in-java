@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "MarketType",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": "sportsbook.avro.outbound.enum.Origin"
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

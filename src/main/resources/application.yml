@@ -78,3 +78,11 @@ sportsdata:
   computed-market-topic: stream.${input.data.type}.ardevar.sport.markets
   computed-event-topic: stream.${input.data.type}.ardevar.sport.events
   computed-enumeration-topic: stream.${input.data.type}.ardevar.sport.enumerations
+  enum-countries-topic: stream.${input.data.type}.ardevar.sport.enumeration.countries
+  enum-game-periods-topic: stream.${input.data.type}.ardevar.sport.enumeration.game-periods
+  enum-leagues-topic: stream.${input.data.type}.ardevar.sport.enumeration.leagues
+  enum-line-entities-topic: stream.${input.data.type}.ardevar.sport.enumeration.line-entities
+  enum-market-types-topic: stream.${input.data.type}.ardevar.sport.enumeration.market-types
+  enum-sports-topic: stream.${input.data.type}.ardevar.sport.enumeration.sports
+  enum-teams-topic: stream.${input.data.type}.ardevar.sport.enumeration.teams
+  enum-market-lines-topic: stream.${input.data.type}.ardevar.sport.enumeration.market-lines

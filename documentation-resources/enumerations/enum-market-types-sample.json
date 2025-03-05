@@ -1,0 +1,12 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "marketType",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "368",
+    "key": "last_action_in_match"
+  },
+  "value": "Last action in match"
+}

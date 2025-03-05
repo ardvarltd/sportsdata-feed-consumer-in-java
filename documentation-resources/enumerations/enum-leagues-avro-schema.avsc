@@ -1,0 +1,86 @@
+{
+  "type": "record",
+  "name": "League",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": {
+        "type": "record",
+        "name": "Origin",
+        "fields": [
+          {
+            "name": "stream",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": {
+              "type": "enum",
+              "name": "OriginTypeEnum",
+              "symbols": [
+                "sport",
+                "league",
+                "team",
+                "lineEntity",
+                "gamePeriod",
+                "marketType",
+                "market",
+                "country"
+              ]
+            }
+          },
+          {
+            "name": "version",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "SportInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "country",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "CountryInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

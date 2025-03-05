@@ -1,0 +1,18 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "team",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "1114293"
+  },
+  "sport": {
+    "id": 3
+  },
+  "country": {
+    "id": 1
+  },
+  "gender": "male",
+  "value": "Rhinos"
+}

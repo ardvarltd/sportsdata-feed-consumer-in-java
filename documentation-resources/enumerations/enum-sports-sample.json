@@ -1,0 +1,12 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "sport",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "61",
+    "key": "chess"
+  },
+  "value": "Chess"
+}

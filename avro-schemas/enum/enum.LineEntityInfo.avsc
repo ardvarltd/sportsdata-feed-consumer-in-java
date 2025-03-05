@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "LineEntityInfo",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "id",
+      "type": "long"
+    }
+  ]
+}

@@ -232,6 +232,30 @@
                   ${project.basedir}/avro-schemas/enumeration.avsc
                 </import>
 
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.Origin.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.SportInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.CountryInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.GamePeriodInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.LineEntityInfo.avsc
+                </import>
+
+                <import>
+                  ${project.basedir}/avro-schemas/enum/enum.MarketTypeInfo.avsc
+                </import>
+
               </imports>
               <outputDirectory>${project.basedir}/src/main/java
               </outputDirectory>

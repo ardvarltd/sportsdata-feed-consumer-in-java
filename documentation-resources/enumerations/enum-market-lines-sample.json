@@ -1,0 +1,23 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "market",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "46-24-1-1202"
+  },
+  "sport": {
+    "id": 46
+  },
+  "marketType": {
+    "id": 24
+  },
+  "gamePeriod": {
+    "id": 1202
+  },
+  "lineEntity": {
+    "id": 1
+  },
+  "value": "Liga A"
+}

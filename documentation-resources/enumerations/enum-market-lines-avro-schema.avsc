@@ -1,0 +1,120 @@
+{
+  "type": "record",
+  "name": "Market",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": {
+        "type": "record",
+        "name": "Origin",
+        "fields": [
+          {
+            "name": "stream",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": {
+              "type": "enum",
+              "name": "OriginTypeEnum",
+              "symbols": [
+                "sport",
+                "league",
+                "team",
+                "lineEntity",
+                "gamePeriod",
+                "marketType",
+                "market",
+                "country"
+              ]
+            }
+          },
+          {
+            "name": "version",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "SportInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "marketType",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "MarketTypeInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriod",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "GamePeriodInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "lineEntity",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "LineEntityInfo",
+          "fields": [
+            {
+              "name": "id",
+              "type": "long"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

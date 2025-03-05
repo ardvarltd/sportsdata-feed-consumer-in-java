@@ -28,3 +28,4 @@ replay_pid*
 /src/main/java/stream/avro/
 /target/
 /.idea/
+/src/main/java/sportsbook/avro/outbound/enum$/

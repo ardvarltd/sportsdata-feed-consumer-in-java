@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "GamePeriod",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": "sportsbook.avro.outbound.enum.Origin"
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.SportInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

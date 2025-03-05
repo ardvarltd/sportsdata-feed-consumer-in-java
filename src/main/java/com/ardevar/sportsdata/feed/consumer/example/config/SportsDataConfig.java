@@ -13,6 +13,13 @@ public class SportsDataConfig {
     private String computedMarketTopic;
     private String computedEventTopic;
     private String computedEnumerationTopic;
-
+    private String enumCountriesTopic;
+    private String enumGamePeriodsTopic;
+    private String enumLeaguesTopic;
+    private String enumLineEntitiesTopic;
+    private String enumMarketTypesTopic;
+    private String enumSportsTopic;
+    private String enumTeamsTopic;
+    private String enumMarketLinesTopic;
 
 }

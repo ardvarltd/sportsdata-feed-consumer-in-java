@@ -1,0 +1,15 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "gamePeriod",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "1452",
+    "key": "ft"
+  },
+  "sport": {
+    "id": 45
+  },
+  "value": "Full Time"
+}

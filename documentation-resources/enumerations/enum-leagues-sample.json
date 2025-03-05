@@ -1,0 +1,17 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "league",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "649597"
+  },
+  "sport": {
+    "id": 2
+  },
+  "country": {
+    "id": 1
+  },
+  "value": "ITF W15 Pretoria"
+}

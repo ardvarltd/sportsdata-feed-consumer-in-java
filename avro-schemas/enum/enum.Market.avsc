@@ -1,0 +1,54 @@
+{
+  "type": "record",
+  "name": "Market",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": "sportsbook.avro.outbound.enum.Origin"
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.SportInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "marketType",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.MarketTypeInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "gamePeriod",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.GamePeriodInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "lineEntity",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.LineEntityInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

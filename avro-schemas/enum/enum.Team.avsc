@@ -1,0 +1,43 @@
+{
+  "type": "record",
+  "name": "Team",
+  "namespace": "sportsbook.avro.outbound.enum",
+  "fields": [
+    {
+      "name": "origin",
+      "type": "sportsbook.avro.outbound.enum.Origin"
+    },
+    {
+      "name": "referentialConstraint",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "sport",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.SportInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "country",
+      "type": [
+        "null",
+        "sportsbook.avro.outbound.enum.CountryInfo"
+      ],
+      "default": null
+    },
+    {
+      "name": "gender",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}

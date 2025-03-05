@@ -1,0 +1,12 @@
+{
+  "origin": {
+    "stream": "enumerations",
+    "type": "country",
+    "version": "1.0.0"
+  },
+  "referentialConstraint": {
+    "id": "184",
+    "key": "SGS"
+  },
+  "value": "S. Georgia and S. Sandwich Isls."
+}
