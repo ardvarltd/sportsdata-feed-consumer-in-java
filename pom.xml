@@ -197,6 +197,10 @@
                 </import>
 
                 <import>
+                  ${project.basedir}/avro-schemas/brandedSettlement.avsc
+                </import>
+                
+                <import>
                   ${project.basedir}/avro-schemas/sport.avsc
                 </import>
 
