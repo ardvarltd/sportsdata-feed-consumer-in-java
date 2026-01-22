@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import models.avro.EventSportsStreamMessage;
 import models.avro.MarketSportsStreamMessage;
 import models.avro.SettlementSportsStreamMessage;
+import models.avro.BrandedSettlementValue;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.Consumed;
@@ -71,6 +72,16 @@ public class KafkaStreamsAvroTopology {
             (key, value) ->
                 log.info(
                     "Got Record From Settlement Stream with id {} - {}",
+                    key,
+                    value != null ? value.toString() : null));
+
+    builder.stream(
+            sportsDataConfig.getBrandedSettlementTopic(),
+            Consumed.with(Serdes.String(), brandedSettlementSpecificAvroSerde))
+        .peek(
+            (key, value) ->
+                log.info(
+                    "Got Record From BrandedSettlement Stream with id {} - {}",
                     key,
                     value != null ? value.toString() : null));
 
