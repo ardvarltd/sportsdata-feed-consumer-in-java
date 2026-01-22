@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import models.avro.EventSportsStreamMessage;
 import models.avro.MarketSportsStreamMessage;
 import models.avro.SettlementSportsStreamMessage;
+import models.avro.BrandedSettlementValue;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,15 @@ public class AvroSerdes {
     @Bean("sportStreamSettlementAvroSerde")
     public SpecificAvroSerde<SettlementSportsStreamMessage> settlementSportsStreamMessageSpecificAvroSerde() {
         final SpecificAvroSerde<SettlementSportsStreamMessage> specificAvroSerde = new SpecificAvroSerde<>();
+        final Map<String, Object> map = new HashMap<>();
+        map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration()).get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
+        specificAvroSerde.configure(map, false);
+        return specificAvroSerde;
+    }
+
+    @Bean("brandedSettlementAvroSerde")
+    public SpecificAvroSerde<BrandedSettlementValue> brandedSettlementSpecificAvroSerde() {
+        final SpecificAvroSerde<BrandedSettlementValue> specificAvroSerde = new SpecificAvroSerde<>();
         final Map<String, Object> map = new HashMap<>();
         map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration()).get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
         specificAvroSerde.configure(map, false);
