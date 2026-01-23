@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import models.avro.EventSportsStreamMessage;
 import models.avro.MarketSportsStreamMessage;
 import models.avro.SettlementSportsStreamMessage;
-import models.avro.BrandedSettlementValue;
+import model.messages.v2.avro.b2b.BrandedSettlementValue;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.Consumed;
@@ -31,6 +31,8 @@ public class KafkaStreamsAvroTopology {
   private final StreamsBuilderFactoryBean streamsBuilderFactoryBean;
   private final SpecificAvroSerde<SettlementSportsStreamMessage>
       settlementSportsStreamMessageSpecificAvroSerde;
+  private final SpecificAvroSerde<BrandedSettlementValue>
+          brandedSettlementValueSpecificAvroSerde;
   private final SpecificAvroSerde<EventSportsStreamMessage>
       eventSportsStreamMessageSpecificAvroSerde;
   private final SpecificAvroSerde<MarketSportsStreamMessage>
@@ -77,7 +79,7 @@ public class KafkaStreamsAvroTopology {
 
     builder.stream(
             sportsDataConfig.getBrandedSettlementTopic(),
-            Consumed.with(Serdes.String(), brandedSettlementSpecificAvroSerde))
+            Consumed.with(Serdes.String(), brandedSettlementValueSpecificAvroSerde))
         .peek(
             (key, value) ->
                 log.info(

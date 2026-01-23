@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "BrandedSettlementValue",
-  "namespace": "models.avro",
+  "namespace": "model.messages.v2.avro.b2b",
   "fields": [
     {
       "name": "origin",

@@ -197,7 +197,7 @@
                 </import>
 
                 <import>
-                  ${project.basedir}/avro-schemas/brandedSettlement.avsc
+                  ${project.basedir}/avro-schemas/brandedSettlementValue.avsc
                 </import>
                 
                 <import>
