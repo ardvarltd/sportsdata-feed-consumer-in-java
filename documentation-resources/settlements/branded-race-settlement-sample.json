@@ -1,0 +1,39 @@
+{
+  "origin": {
+    "stream": "sport",
+    "type": "selectionSettlement",
+    "version": "2.0.0"
+  },
+  "id": "5731c890-f190-11f0-ac6f-42010a9c003a",
+  "event": {
+    "id": "1aa595aa-5095-a7f1-f0d7-a6d81f7cc16f",
+    "sbReferenceId": "11303816"
+  },
+  "market": {
+    "id": "373eb553-0c4d-762e-7f02-39c0edcf96bd",
+    "sbReferenceId": "956481746"
+  },
+  "selection": {
+    "id": "b314414a-be0c-7345-e020-6dca67a2b88e",
+    "sbReferenceId": "4670994494#4670994499",
+    "linkedSelections": [
+      {
+        "id": "272b4d47-804e-2ebf-99be-e8722c7e0b3b",
+        "sbReferenceId": "4670994494",
+        "finalRank": 1
+      },
+      {
+        "id": "e1355700-9a3b-98d2-23db-e583d9d69fbe",
+        "sbReferenceId": "4670994499",
+        "finalRank": 2
+      }
+    ],
+    "value": 12.72,
+    "isValid": false,
+    "spread": 0.0
+  },
+  "status": "win",
+  "isEarlyPayout": false,
+  "isFastSettlement": false,
+  "timestamp": "2026-01-15 08:16:13.298+0000"
+}

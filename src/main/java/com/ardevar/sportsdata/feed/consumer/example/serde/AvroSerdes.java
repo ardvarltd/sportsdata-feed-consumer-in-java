@@ -3,6 +3,7 @@ package com.ardevar.sportsdata.feed.consumer.example.serde;
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
 import lombok.RequiredArgsConstructor;
+import model.messages.v2.avro.b2b.BrandedSettlementValue;
 import models.avro.EventSportsStreamMessage;
 import models.avro.MarketSportsStreamMessage;
 import models.avro.SettlementSportsStreamMessage;
@@ -26,6 +27,15 @@ public class AvroSerdes {
     @Bean("sportStreamSettlementAvroSerde")
     public SpecificAvroSerde<SettlementSportsStreamMessage> settlementSportsStreamMessageSpecificAvroSerde() {
         final SpecificAvroSerde<SettlementSportsStreamMessage> specificAvroSerde = new SpecificAvroSerde<>();
+        final Map<String, Object> map = new HashMap<>();
+        map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration()).get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
+        specificAvroSerde.configure(map, false);
+        return specificAvroSerde;
+    }
+
+    @Bean("brandedSettlementAvroSerde")
+    public SpecificAvroSerde<BrandedSettlementValue> brandedSettlementSpecificAvroSerde() {
+        final SpecificAvroSerde<BrandedSettlementValue> specificAvroSerde = new SpecificAvroSerde<>();
         final Map<String, Object> map = new HashMap<>();
         map.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, Objects.requireNonNull(streamsBuilderFactoryBean.getStreamsConfiguration()).get(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG));
         specificAvroSerde.configure(map, false);

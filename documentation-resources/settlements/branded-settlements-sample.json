@@ -1,0 +1,31 @@
+{
+  "origin": {
+    "stream": "sport",
+    "type": "selectionSettlement",
+    "version": "2.0.0"
+  },
+  "id": "09fa1fac-f1e8-11f0-ac6f-42010a9c003a",
+  "event": {
+    "id": "5eac8e98-8193-fe38-90f4-b50750377f70",
+    "sbReferenceId": "11312856"
+  },
+  "market": {
+    "id": "56471263-d983-afbb-8fb5-dc599c9bfa49",
+    "sbReferenceId": "956621475"
+  },
+  "selection": {
+    "id": "3ed3bcda-3932-ce39-ee9e-33dca2f5ef49",
+    "sbReferenceId": "4671395653",
+    "value": 1.511,
+    "isValid": false,
+    "spread": 3.5
+  },
+  "status": "win",
+  "isEarlyPayout": false,
+  "isFastSettlement": false,
+  "closingScore": {
+    "home": 2,
+    "away": 3
+  },
+  "timestamp": "2026-01-15 08:16:24.757+0000"
+}

@@ -1,0 +1,222 @@
+{
+  "type": "record",
+  "name": "BrandedSettlementValue",
+  "namespace": "model.messages.v2.avro.b2b",
+  "fields": [
+    {
+      "name": "origin",
+      "type": {
+        "type": "record",
+        "name": "Origin",
+        "fields": [
+          {
+            "name": "stream",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "type",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "version",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "event",
+      "type": {
+        "type": "record",
+        "name": "Event",
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "sbReferenceId",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "market",
+      "type": {
+        "type": "record",
+        "name": "Market",
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "sbReferenceId",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "selection",
+      "type": {
+        "type": "record",
+        "name": "Selection",
+        "fields": [
+          {
+            "name": "id",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "sbReferenceId",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "linkedSelections",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": {
+                  "type": "record",
+                  "name": "LinkedSelection",
+                  "fields": [
+                    {
+                      "name": "id",
+                      "type": {
+                        "type": "string",
+                        "avro.java.string": "String"
+                      }
+                    },
+                    {
+                      "name": "sbReferenceId",
+                      "type": {
+                        "type": "string",
+                        "avro.java.string": "String"
+                      }
+                    },
+                    {
+                      "name": "finalRank",
+                      "type": "int"
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "value",
+            "type": [
+              "null",
+              "double"
+            ],
+            "default": null
+          },
+          {
+            "name": "isValid",
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "default": null
+          },
+          {
+            "name": "spread",
+            "type": [
+              "null",
+              "double"
+            ],
+            "default": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "isEarlyPayout",
+      "type": "boolean"
+    },
+    {
+      "name": "isFastSettlement",
+      "type": "boolean"
+    },
+    {
+      "name": "closingScore",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "ClosingScore",
+          "fields": [
+            {
+              "name": "home",
+              "type": "int"
+            },
+            {
+              "name": "away",
+              "type": "int"
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

@@ -13,6 +13,7 @@ public class SportsDataConfig {
     private String computedMarketTopic;
     private String computedEventTopic;
     private String computedEnumerationTopic;
+    private String brandedSettlementTopic;
 
 
 }
